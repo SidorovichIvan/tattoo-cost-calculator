@@ -1,0 +1,58 @@
+.font-big {
+    font-size: 28px;
+}
+
+.font-medium {
+    font-size: 20px;
+}
+
+.font-small {
+    font-size: 16px;
+}
+
+.font-extra-small {
+    font-size: 15px;
+    line-height: 23px;
+}
+
+@media (max-width:400px) {
+
+    .font-big {
+        font-size: 26px;
+    }
+
+    .font-medium {
+        font-size: 18px;
+    }
+
+    .font-small {
+        font-size: 15px;
+    }
+
+    .font-extra-small {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+@media (max-width:345px) {
+
+    .font-big {
+        font-size: 23px;
+    }
+
+    .font-medium {
+        font-size: 15px;
+    }
+
+    .font-small {
+        font-size: 14px;
+    }
+
+    .font-extra-small {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+}

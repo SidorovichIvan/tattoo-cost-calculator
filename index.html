@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <title>Mus.Autem</title>
+</head>
+
+
+<body>
+
+    <div class="background"></div>
+
+    <header class="container header">
+        <img src="img/logo.png" alt="Логотип Mus Autem" class="header__logo" id="logo">
+
+        <h1 class="header__tittle font-big">Калькулятор<br>стоимости&nbsp;татуировки</h1>
+
+        <div class="line"></div>
+
+        <div class="details">
+
+            <h2 class="details__tittle font-medium">Калькулятор&nbsp;расчитывает
+                примерную&nbsp;стоимость&nbsp;татуировки.</h2>
+
+            <span class="details__list-label font-medium" id="details-link">подробнее&nbsp;&nbsp;<i
+                    class="fas fa-plus fa-minus"></i></span>
+
+            <div class="wrapper__details">
+                <dl class="details__list back font-extra-small">
+
+                    <dt>Цена</dt>
+                    <dd> Калькулятор рассчитывает стоимость для татуировок в стиле лайнворк. Для других стилей
+                        цена
+                        может отличатся, пиши мне в Директ)</dd>
+
+                    <dt>Бесплатно</dt>
+                    <dd>В конце сеанса я заклею твою тату заживляющей плёночкой Suprasorb&nbsp;F&nbsp;и подарю
+                        крем для ухода.</dd>
+
+                    <dt>🔞</dt>
+                    <dd> До 18 лет сделать татуировку мы можем только в присутствии на сеансе
+                        родителя&nbsp;/&nbsp;опекуна,
+                        либо с его письменного разрешения.</dd>
+                </dl>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" id="navigation-container">
+        <section id="picture">
+
+            <div class="button-wrapper">
+                <button class="back-button font-medium">назад</button>
+            </div>
+
+            <div class="forms">
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите количество цветов</h2>
+
+                    <div class="forms__select">
+
+                        <div class="forms-select__label font-small">
+
+                            <span id="color-value-picture">Цвет</span>
+                            <i class="fas fa-sort-down" id="popUp_color_i"></i>
+                        </div>
+
+                        <div class="wrapper__select-picture">
+
+                            <ul class="forms-select__list back font-small" id="color">
+                                <li data-ratio="1">Один цвет</li>
+                                <li data-ratio="1.1">2 цвета</li>
+                                <li data-ratio="1.2">3 и более цвета</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите место нанесения</h2>
+
+                    <div class="forms__select">
+                        <div class="forms-select__label font-small">
+
+                            <span id="place-value-picture">Место</span>
+                            <i class="fas fa-sort-down" id="popUp_color_i"></i>
+                        </div>
+
+                        <div class="wrapper__select-picture">
+
+                            <ul class="forms-select__list back font-small" id="place">
+                                <li data-ratio="35">Шея / За ухом</li>
+                                <li data-ratio="35">Ключица / Грудь</li>
+                                <li data-ratio="32">Ребра/ Живот</li>
+                                <li data-ratio="31">Спина</li>
+                                <li data-ratio="31">Плечо / Предплечье</li>
+                                <li data-ratio="35">Кисть / Пальцы</li>
+                                <li data-ratio="31">Бедро/ Голень</li>
+                                <li data-ratio="35">Подъем стопы</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите ширину татуировки</h2>
+
+                    <input type="range" class="range" min="1" max="25" step="1" value="5" id="width-picture">
+
+                    <div class="range-value font-medium">
+                        <span id="result-width-picture">5</span><span>&nbsp;см</span>
+                    </div>
+
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите высоту татуировки</h2>
+
+                    <input type="range" class="range" min="1" max="25" step="1" value="5" id="height-picture">
+
+                    <div class="range-value font-medium">
+                        <span id="result-height-picture">5</span><span>&nbsp;см</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result">
+                <div class="result__price">
+                    <p class="font-medium">Стоимость&nbsp;&nbsp;<span id="price-picture">---</span>&nbsp;руб.</p>
+                </div>
+                <p class="font-small" id="result-message-picture">Ура! Это примерная стоимость твоей тату! Пиши&nbsp;мне
+                    в Директ, обсудим детали)</p>
+            </div>
+
+        </section>
+
+        <section id="navigation">
+            <div class="navigation__menu">
+                <h2 class="navigation-menu__title font-big">Что бьем ?</h2>
+
+                <div class="navigation-menu__buttons">
+
+                    <button class="navigation-menu__item font-medium" id="picture-link">Рисунок</button>
+                    <button class="navigation-menu__item font-medium" id="text-link">Надпись</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="text">
+            <div class="button-wrapper">
+                <button class="back-button font-medium">назад</button>
+            </div>
+
+            <div class="forms">
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Введите текст надписи</h2>
+
+                    <input type="text" class="forms-item__input-text font-small" maxlength="100"
+                        placeholder="Фраза со смыслом..." id="inscription-text">
+
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите стиль</h2>
+
+                    <div class="forms__buttons">
+
+                        <button class="forms-buttons__item-text font-medium buttons__style-active">прописной</button>
+                        <button class="forms-buttons__item-text font-medium">печатный</button>
+                    </div>
+
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Выберите количество цветов</h2>
+
+                    <div class="forms__select">
+
+                        <div class="forms-select__label font-small">
+                            <span id="color-value-text">Цвет</span>
+                            <i class="fas fa-sort-down" id="popUp_color_i"></i>
+                        </div>
+
+                        <div class="wrapper__select-text">
+
+                            <ul class="forms-select__list back select font-small" id="color">
+                                <li data-ratio="1">Один цвет</li>
+                                <li data-ratio="1.1">2 цвета</li>
+                                <li data-ratio="1.2">3 и более цвета</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forms__item">
+                    <h2 class="forms__title font-medium">Введите длину строки</h2>
+
+                    <input type="range" class="range" min="1" max="40" step="1" value="5" id="width-text">
+
+                    <div class="range-value font-medium">
+                        <span id="result-width-text">5</span><span>&nbsp;см</span>
+                    </div>
+
+                    <p class="font-extra-small">* если надпись в несколько строчек, то укажите их сумму </p>
+                </div>
+            </div>
+
+            <div class="result">
+                <div class="result__price">
+                    <p class="font-medium">Стоимость&nbsp;&nbsp;<span id="price-text">---</span>&nbsp;руб.</p>
+                </div>
+                <p class="font-small" id="result-message-text">Ура! Это примерная стоимость твоей тату! Пиши&nbsp;мне в
+                    Директ,
+                    обсудим детали)</p>
+            </div>
+        </section>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/calculating-text.js"></script>
+    <script src="js/calculating-picture.js"></script>
+
+
+</body>
+
+</html>
